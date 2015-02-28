@@ -23,7 +23,7 @@ Template.eventItem.events({
     else {
       Meteor.call('joinEvent', this, function(error, result) {
         if (error) {
-          Alerts.add("Es ist ein Fehler aufgetreten");
+          Alerts.add(error.message);
         }
       });
     }
@@ -36,9 +36,28 @@ Template.eventItem.events({
     else {
       Meteor.call('leaveEvent', this, function(error, result) {
         if (error) {
-          Alerts.add("Es ist ein Fehler aufgetreten");
+          Alerts.add(error.message);
         }
       });
     }
   }
 });
+
+Template.eventItem.rendered = function() {
+  !function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+    return t;
+  }(document, "script", "twitter-wjs");
+  twttr.widgets.load(this.firstNode);
+};

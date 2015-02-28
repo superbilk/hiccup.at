@@ -1,6 +1,6 @@
 <template name="eventItem">
   <div class="eventItem" id="{{_id}}">
-    <h3><a href="{{pathFor 'eventPage'}}">{{title}}</a></h3>
+    <h3><img src="{{logoImage}}" class="img-thumbnail" height="40px" width="40px"> <a href="{{pathFor 'eventPage'}}">{{title}}</a></h3>
     {{#if attendants}}
     <p>
       Es sind {{attendantsCount}} Teilnehmer da!
@@ -35,11 +35,11 @@
 </template>
 
 <template name="followButton">
-    <iframe
-    src="//platform.twitter.com/widgets/follow_button.html?screen_name={{user}}&lang=de&show_count=true&show_screen_name=true"
-    style="width: 300px; height: 20px;"
-    allowtransparency="true"
-    frameborder="0"
-    scrolling="no">
-  </iframe>
+  <a class="twitter-follow-button"
+  href="https://twitter.com/{{user}}"
+  data-show-count="true"
+  data-lang="de"
+  data-size = "large">
+  Follow @{{user}}
+  </a>
 </template>
