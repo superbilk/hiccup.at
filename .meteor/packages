@@ -18,3 +18,4 @@ service-configuration
 meteorhacks:kadira
 accounts-base
 mrt:bootstrap-alerts
+audit-argument-checks

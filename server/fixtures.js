@@ -32,6 +32,7 @@ Meteor.startup(function () {
       title: 'beyond tellerrand',
       slug: 'bt-dus-2015',
       url: 'http://beyondtellerrand.com',
+      logoImage: "https://pbs.twimg.com/profile_images/478502156589617152/7WDu9XsV.jpeg",
       dateBegin: new Date("2015-05-11T00:00:00Z"),
       dateEnd: new Date("2015-05-13T00:00:00Z"),
       attendants: [
@@ -57,6 +58,7 @@ Meteor.startup(function () {
       title: 'Webworker NRW',
       slug: 'wwnrw-17',
       url: 'http://webworker-nrw.de',
+      logoImage: "http://webworker-nrw.de/assets/images/WWNRW.png",
       attendants: [
         {
           _id: barney,
@@ -75,6 +77,7 @@ Meteor.startup(function () {
       title: 'Lean DUS #4',
       slug: 'leandus-4',
       url: 'http://leandus.de',
+      logoImage: "https://www.leanuxdus.de/files/2015/01/logo-small-leandus.png",
       dateBegin: new Date("2015-04-28T18:00:00Z"),
       dateEnd: new Date("2015-04-28T22:00:00Z")
     });
@@ -83,6 +86,7 @@ Meteor.startup(function () {
       title: 'Lean UX DUS #3',
       slug: 'leanuxdus-3',
       url: 'http://leanuxdus.de',
+      logoImage: "https://www.leandus.de/files/2015/01/logo-small-leanuxdus.png",
       dateBegin: new Date("2015-02-24T18:00:00Z"),
       dateEnd: new Date("2015-02-24T22:00:00Z")
     });
