@@ -1,9 +1,20 @@
 <template name="eventItem">
-  <div class="eventItem">
+  <div class="eventItem" id="{{_id}}">
     <h3><a href="{{pathFor 'eventPage'}}">{{title}}</a></h3>
+    {{#if attendants}}
     <p>
       Es sind {{attendantsCount}} Leute da!
     </p>
+    <ul>
+    {{#each attendants}}
+      {{> attendant}}
+    {{/each}}
+    </ul>
+    {{else}}
+    <p>
+      Es ist noch niemand da.
+    </p>
+    {{/if}}
     <p>Beginn: {{formatDate dateBegin}}</p>
     <p>Ende: {{formatDate dateEnd}}</p>
     <p>
@@ -11,4 +22,13 @@
     </p>
     <a href="{{pathFor 'eventPage'}}" class="btn btn-default">Mehr...</a>
   </div>
+</template>
+
+<template name="attendant">
+  <li>
+    <img src="{{profile_image_url}}">
+    <p>
+      {{screenName}}
+    </p>
+  </li>
 </template>

@@ -58,7 +58,7 @@ Meteor.startup(function () {
         {
           _id: claus,
           screenName: Meteor.users.findOne(claus).services.twitter.screenName,
-          profile_image_url: Meteor.users.findOne(claus).services.twitter.profile_image_url 
+          profile_image_url: Meteor.users.findOne(claus).services.twitter.profile_image_url
         },
       ]
     });
@@ -66,7 +66,19 @@ Meteor.startup(function () {
     Events.insert({
       title: 'Webworker NRW',
       slug: 'wwnrw-17',
-      url: 'http://webworker-nrw.de'
+      url: 'http://webworker-nrw.de',
+      attendants: [
+        {
+          _id: barney,
+          screenName: Meteor.users.findOne(barney).services.twitter.screenName,
+          profile_image_url: Meteor.users.findOne(barney).services.twitter.profile_image_url
+        },
+        {
+          _id: claus,
+          screenName: Meteor.users.findOne(claus).services.twitter.screenName,
+          profile_image_url: Meteor.users.findOne(claus).services.twitter.profile_image_url
+        },
+      ]
     });
 
     Events.insert({
