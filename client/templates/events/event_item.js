@@ -24,7 +24,8 @@ Template.eventItem.events({
       Meteor.call('joinEvent', this, function(error, result) {
         if (error) {
           Alerts.add(error.message);
-        }
+        };
+        twttr.widgets.load(this.firstNode);
       });
     }
   },
@@ -37,7 +38,7 @@ Template.eventItem.events({
       Meteor.call('leaveEvent', this, function(error, result) {
         if (error) {
           Alerts.add(error.message);
-        }
+        };
       });
     }
   }
