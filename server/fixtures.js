@@ -7,7 +7,7 @@ Meteor.startup(function () {
         twitter : {
           "profile_image_url" : "http://dummyimage.com/48x48&text=A",
           "profile_image_url_https" : "https://dummyimage.com/48x48&text=A",
-          "screenName" : "albertTwitter"
+          "screenName" : "sipgateDE"
         },
       }
     });
