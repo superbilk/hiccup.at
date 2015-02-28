@@ -33,7 +33,7 @@ Meteor.startup(function () {
       slug: 'bt-dus-2015',
       url: 'http://beyondtellerrand.com',
       logoImage: "https://pbs.twimg.com/profile_images/478502156589617152/7WDu9XsV.jpeg",
-      dateBegin: new Date("2015-05-11T00:00:00Z"),
+      dateBegin: moment(new Date("2015-05-11T00:00:00Z")).format("DD.MM.YYYY"),
       dateEnd: new Date("2015-05-13T00:00:00Z"),
       attendants: [
         {
@@ -78,7 +78,7 @@ Meteor.startup(function () {
       slug: 'leandus-4',
       url: 'http://leandus.de',
       logoImage: "https://www.leanuxdus.de/files/2015/01/logo-small-leandus.png",
-      dateBegin: new Date("2015-04-28T18:00:00Z"),
+      dateBegin: moment(new Date("2015-05-11T00:00:00Z")).format("DD.MM.YYYY"),
       dateEnd: new Date("2015-04-28T22:00:00Z")
     });
 

@@ -1,6 +1,6 @@
 <template name="eventItem">
-  <div class="eventItem" id="{{_id}}">
-    <h3><img src="{{logoImage}}" class="img-thumbnail" height="40px" width="40px"> <a href="{{pathFor 'eventPage'}}">{{title}}</a></h3>
+  <div class="eventItem well" id="{{_id}}">
+    <h2><img src="{{logoImage}}" class="img-thumbnail" height="48px" width="48px"> <a href="{{pathFor 'eventPage'}}">{{title}}</a></h2>
     {{#if attendants}}
     <p>
       Es sind {{attendantsCount}} Teilnehmer da!
