@@ -2,39 +2,29 @@ Meteor.startup(function () {
   if (Meteor.users.find().count() === 0) {
 
     var albert = Meteor.users.insert({
-      profile : { name: "Albert" },
-      services : {
-        twitter : {
-          "profile_image_url" : "http://dummyimage.com/48x48&text=A",
-          "profile_image_url_https" : "https://dummyimage.com/48x48&text=A",
-          "screenName" : "sipgateDE"
-        },
+      profile : {
+        name: "Albert",
+        twitterName: "sipgateDE",
+        twitterImage: "http://dummyimage.com/48x48&text=A"
       }
     });
 
     var barney = Meteor.users.insert({
-      profile : { name: "Barney" },
-      services : {
-        twitter : {
-          "profile_image_url" : "http://dummyimage.com/48x48&text=B",
-          "profile_image_url_https" : "https://dummyimage.com/48x48&text=B",
-          "screenName" : "barneyTwitter"
-        },
+      profile : {
+        name: "Barney",
+        twitterName: "barneyTwitter",
+        twitterImage: "http://dummyimage.com/48x48&text=B"
       }
     });
 
     var claus = Meteor.users.insert({
-      profile : { name: "claus" },
-      services : {
-        twitter : {
-          "profile_image_url" : "http://dummyimage.com/48x48&text=C",
-          "profile_image_url_https" : "https://dummyimage.com/48x48&text=C",
-          "screenName" : "clausTwitter"
-        },
+      profile : {
+        name: "claus",
+        twitterName: "clausTwitter",
+        twitterImage: "http://dummyimage.com/48x48&text=C"
       }
     });
   }
-
 
   if (Events.find().count() === 0) {
 
@@ -47,18 +37,18 @@ Meteor.startup(function () {
       attendants: [
         {
           _id: albert,
-          screenName: Meteor.users.findOne(albert).services.twitter.screenName,
-          profile_image_url: Meteor.users.findOne(albert).services.twitter.profile_image_url
+          twitterName: Meteor.users.findOne(albert).profile.twitterName,
+          twitterImage: Meteor.users.findOne(albert).profile.twitterImage
         },
         {
           _id: barney,
-          screenName: Meteor.users.findOne(barney).services.twitter.screenName,
-          profile_image_url: Meteor.users.findOne(barney).services.twitter.profile_image_url
+          twitterName: Meteor.users.findOne(barney).profile.twitterName,
+          twitterImage: Meteor.users.findOne(barney).profile.twitterImage
         },
         {
           _id: claus,
-          screenName: Meteor.users.findOne(claus).services.twitter.screenName,
-          profile_image_url: Meteor.users.findOne(claus).services.twitter.profile_image_url
+          twitterName: Meteor.users.findOne(claus).profile.twitterName,
+          twitterImage: Meteor.users.findOne(claus).profile.twitterImage
         },
       ]
     });
@@ -70,14 +60,14 @@ Meteor.startup(function () {
       attendants: [
         {
           _id: barney,
-          screenName: Meteor.users.findOne(barney).services.twitter.screenName,
-          profile_image_url: Meteor.users.findOne(barney).services.twitter.profile_image_url
+          twitterName: Meteor.users.findOne(barney).profile.twitterName,
+          twitterImage: Meteor.users.findOne(barney).profile.twitterImage
         },
         {
           _id: claus,
-          screenName: Meteor.users.findOne(claus).services.twitter.screenName,
-          profile_image_url: Meteor.users.findOne(claus).services.twitter.profile_image_url
-        },
+          twitterName: Meteor.users.findOne(claus).profile.twitterName,
+          twitterImage: Meteor.users.findOne(claus).profile.twitterImage
+        }
       ]
     });
 

@@ -27,15 +27,15 @@
 <template name="attendant">
   <li>
     <p>
-      <img src="{{profile_image_url}}" class="img-rounded">
-      {{screenName}}
-      {{> followButton user=screenName}}
+      <img src="{{twitterImage}}" class="img-rounded">
+      {{twitterName}}
+      {{> followButton user=twitterName}}
     </p>
   </li>
 </template>
 
 <template name="followButton">
-  <iframe
+    <iframe
     src="//platform.twitter.com/widgets/follow_button.html?screen_name={{user}}&lang=de&show_count=true&show_screen_name=true"
     style="width: 300px; height: 20px;"
     allowtransparency="true"

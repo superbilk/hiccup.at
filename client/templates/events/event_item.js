@@ -4,7 +4,12 @@ Template.eventItem.helpers({
   },
   currentUserAttending: function() {
     return _.find(this.attendants, function(attendant){
-      return attendant._id === Meteor.user()._id;
+      if (Meteor.user()) {
+        return attendant._id === Meteor.user()._id;
+      }
+      else {
+        return false;
+      }
     });
   }
 });
