@@ -17,10 +17,20 @@ Template.eventItem.helpers({
 Template.eventItem.events({
   'click button.join': function(event){
     event.preventDefault();
-    Meteor.call('joinEvent', this, function(error, result) {});
+    if (!Meteor.user()) {
+      Alerts.add("Bitte mit Twitter anmelden.");
+    }
+    else {
+      Meteor.call('joinEvent', this, function(error, result) {});
+    }
   },
   'click button.leave': function(event){
     event.preventDefault();
-    Meteor.call('leaveEvent', this, function(error, result) {});
+    if (!Meteor.user()) {
+      Alerts.add("Bitte mit Twitter anmelden.");
+    }
+    else {
+      Meteor.call('leaveEvent', this, function(error, result) {});
+    }
   }
 });

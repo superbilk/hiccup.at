@@ -19,6 +19,9 @@ Meteor.Spinner.options = {
     left: '50%' // Left position relative to parent in px
 };
 
+Alerts.defaultOptions.autoHide = 6000;
+Alerts.defaultOptions.fadeIn = 600;
+Alerts.defaultOptions.fadeOut = 600;
 // defaultOptions: {
 //
 //      /**
