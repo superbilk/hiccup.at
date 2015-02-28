@@ -1,4 +1,4 @@
-if (Meteor.users.find().count() === 0) {
+if (Meteor.users.find().count() === 1) {
 
   Meteor.users.insert({
     "createdAt" : new Date(),
