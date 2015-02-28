@@ -14,7 +14,7 @@ email
 momentjs:moment
 accounts-twitter
 msavin:mongol
-iamthemuffinman:bootstrap-lumen
 service-configuration
 meteorhacks:kadira
 accounts-base
+mrt:bootstrap-alerts

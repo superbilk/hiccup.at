@@ -1,8 +1,8 @@
 Template.eventsList.helpers({
-  allEvents: function() {
-    return Events.find();
+  upcomingEvents: function() {
+    return Events.find({ dateBegin: {
+      $exists: true,
+      $gte: new Date() }}, {
+      sort: { dateBegin: 1 }});
   }
 });
-
-Template.eventsList.rendered = function() {
-};

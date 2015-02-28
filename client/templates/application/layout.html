@@ -1,17 +1,17 @@
 <template name="layout">
-  <!-- Begin page content -->
-  {{> navbar}}
 
-  {{> githubribbon}}
+  {{> navbar}}
 
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
+        {{> bootstrapAlerts}}
         {{> yield}}
       </div>
     </div>
   </div>
 
   {{> footer}}
+  {{> githubribbon}}
 
 </template>

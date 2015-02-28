@@ -75,8 +75,8 @@ Meteor.startup(function () {
       title: 'Lean DUS #4',
       slug: 'leandus-4',
       url: 'http://leandus.de',
-      dateBegin: new Date("2015-01-28T18:00:00Z"),
-      dateEnd: new Date("2015-01-28T22:00:00Z")
+      dateBegin: new Date("2015-04-28T18:00:00Z"),
+      dateEnd: new Date("2015-04-28T22:00:00Z")
     });
 
     Events.insert({
