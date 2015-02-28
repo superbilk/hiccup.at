@@ -1,6 +1,9 @@
 <template name="eventItem">
-  <div class="eventItem well">
+  <div class="eventItem">
     <h3><a href="{{pathFor 'eventPage'}}">{{title}}</a></h3>
+    <p>
+      Es sind {{attendantsCount}} Leute da!
+    </p>
     <p>Beginn: {{formatDate dateBegin}}</p>
     <p>Ende: {{formatDate dateEnd}}</p>
     <p>
