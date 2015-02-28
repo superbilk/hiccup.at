@@ -1,12 +1,12 @@
-var credentials = JSON.parse(Assets.getText('credentials.json'));
-
-ServiceConfiguration.configurations.upsert(
-  { service: "twitter" },
-  {
-    $set: {
-      consumerKey: credentials.twitter.consumerKey,
-      loginStyle: "popup",
-      secret: credentials.twitter.secret
+Meteor.startup(function () {
+  ServiceConfiguration.configurations.upsert(
+    { service: "twitter" },
+    {
+      $set: {
+        consumerKey: Credentials.twitter.consumerKey,
+        loginStyle: "popup",
+        secret: Credentials.twitter.secret
+      }
     }
-  }
-);
+  );
+});
