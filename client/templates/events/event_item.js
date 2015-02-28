@@ -8,3 +8,14 @@ Template.eventItem.helpers({
     });
   }
 });
+
+Template.eventItem.events({
+  'click button.join': function(event){
+    event.preventDefault();
+    Meteor.call('joinEvent', this, function(error, result) {});
+  },
+  'click button.leave': function(event){
+    event.preventDefault();
+    Meteor.call('leaveEvent', this, function(error, result) {});
+  }
+});

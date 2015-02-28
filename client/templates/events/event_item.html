@@ -16,9 +16,9 @@
     </p>
     {{/if}}
     {{#if currentUserAttending}}
-      <a href="#" class="btn btn-primary">Ich bin da!</a>
+      <button href="#" class="btn btn-danger leave">Ich bin nicht da!</button>
     {{else}}
-      <a href="#" class="btn btn-danger">Ich bin nicht da!</a>
+      <button href="#" class="btn btn-primary join">Ich bin da!</button>
     {{/if}}
     <p>Link: <a href="{{url}}" target="_blank">{{title}}</a></p>
   </div>
