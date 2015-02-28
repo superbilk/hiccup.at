@@ -21,7 +21,11 @@ Template.eventItem.events({
       Alerts.add("Bitte mit Twitter anmelden.");
     }
     else {
-      Meteor.call('joinEvent', this, function(error, result) {});
+      Meteor.call('joinEvent', this, function(error, result) {
+        if (error) {
+          Alerts.add("Es ist ein Fehler aufgetreten");
+        }
+      });
     }
   },
   'click button.leave': function(event){
@@ -30,7 +34,11 @@ Template.eventItem.events({
       Alerts.add("Bitte mit Twitter anmelden.");
     }
     else {
-      Meteor.call('leaveEvent', this, function(error, result) {});
+      Meteor.call('leaveEvent', this, function(error, result) {
+        if (error) {
+          Alerts.add("Es ist ein Fehler aufgetreten");
+        }
+      });
     }
   }
 });
