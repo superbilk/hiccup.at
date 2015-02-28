@@ -15,8 +15,10 @@
       Es ist noch niemand da.
     </p>
     {{/if}}
-    {{#if currentUser}}
+    {{#if currentUserAttending}}
       <a href="#" class="btn btn-primary">Ich bin da!</a>
+    {{else}}
+      <a href="#" class="btn btn-danger">Ich bin nicht da!</a>
     {{/if}}
     <p>Link: <a href="{{url}}" target="_blank">{{title}}</a></p>
   </div>
