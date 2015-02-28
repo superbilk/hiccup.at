@@ -1,0 +1,9 @@
+<template name="eventsList">
+  <h1>Alle Events</h1>
+
+  <div id="eventsList">
+    {{#each allEvents}}
+      {{> eventItem}}
+    {{/each}}
+  </div>
+</template>

@@ -1,0 +1,11 @@
+<template name="eventItem">
+  <div class="eventItem well">
+    <h3><a href="{{pathFor 'eventPage'}}">{{title}}</a></h3>
+    <p>Beginn: {{formatDate dateBegin}}</p>
+    <p>Ende: {{formatDate dateEnd}}</p>
+    <p>
+      Link: <a href="{{url}}" target="_blank">{{title}}</a>
+    </p>
+    <a href="{{pathFor 'eventPage'}}" class="btn btn-default">Mehr...</a>
+  </div>
+</template>
