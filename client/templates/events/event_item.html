@@ -6,21 +6,19 @@
       Es sind {{attendantsCount}} Leute da!
     </p>
     <ul class="list-unstyled">
-    {{#each attendants}}
-      {{> attendant}}
-    {{/each}}
+      {{#each attendants}}
+        {{> attendant}}
+      {{/each}}
     </ul>
     {{else}}
     <p>
       Es ist noch niemand da.
     </p>
     {{/if}}
-    <p>Beginn: {{formatDate dateBegin}}</p>
-    <p>Ende: {{formatDate dateEnd}}</p>
-    <p>
-      Link: <a href="{{url}}" target="_blank">{{title}}</a>
-    </p>
-    <a href="{{pathFor 'eventPage'}}" class="btn btn-default">Mehr...</a>
+    {{#if currentUser}}
+      <a href="#" class="btn btn-primary">Ich bin da!</a>
+    {{/if}}
+    <p>Link: <a href="{{url}}" target="_blank">{{title}}</a></p>
   </div>
 </template>
 
@@ -35,11 +33,11 @@
 </template>
 
 <template name="followButton">
-  <a class="twitter-follow-button"
-    href="https://twitter.com/{{user}}"
-    data-show-count="true"
-    data-lang="de">
-  Follow @{{user}}
-  </a>
-  <script>window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));</script>
+  <iframe
+    src="//platform.twitter.com/widgets/follow_button.html?screen_name={{user}}&lang=de&show_count=true&show_screen_name=true"
+    style="width: 300px; height: 20px;"
+    allowtransparency="true"
+    frameborder="0"
+    scrolling="no">
+  </iframe>
 </template>
