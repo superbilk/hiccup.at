@@ -1,27 +1,27 @@
 Meteor.startup(function () {
   if (Meteor.users.find().count() === 0) {
 
-    var albert = Meteor.users.insert({
+    var justin = Meteor.users.insert({
       profile : {
-        name: "Albert",
-        twitterName: "sipgateDE",
-        twitterImage: "http://dummyimage.com/48x48&text=A"
+        name: "Justin",
+        twitterName: "justinbieber",
+        twitterImage: "https://pbs.twimg.com/profile_images/567185870394904577/d31-qVyv_400x400.jpeg"
       }
     });
 
-    var barney = Meteor.users.insert({
+    var kim = Meteor.users.insert({
       profile : {
-        name: "Barney",
-        twitterName: "barneyTwitter",
-        twitterImage: "http://dummyimage.com/48x48&text=B"
+        name: "Kim",
+        twitterName: "KimKardahian",
+        twitterImage: "https://pbs.twimg.com/profile_images/2344348679/d7fhjj1t1mms16iq0m1p_400x400.jpeg"
       }
     });
 
-    var claus = Meteor.users.insert({
+    var bill = Meteor.users.insert({
       profile : {
-        name: "claus",
-        twitterName: "clausTwitter",
-        twitterImage: "http://dummyimage.com/48x48&text=C"
+        name: "Bill",
+        twitterName: "BillGates",
+        twitterImage: "https://pbs.twimg.com/profile_images/558109954561679360/j1f9DiJi.jpeg"
       }
     });
   }
@@ -33,23 +33,22 @@ Meteor.startup(function () {
       slug: 'bt-dus-2015',
       url: 'http://beyondtellerrand.com',
       logoImage: "https://pbs.twimg.com/profile_images/478502156589617152/7WDu9XsV.jpeg",
-      dateBegin: new Date("2015-05-11T00:00:00Z"),
-      dateEnd: new Date("2015-05-13T00:00:00Z"),
+      dateBegin: new Date("2025-05-11T00:00:00Z"),
       attendants: [
         {
-          _id: albert,
-          twitterName: Meteor.users.findOne(albert).profile.twitterName,
-          twitterImage: Meteor.users.findOne(albert).profile.twitterImage
+          _id: justin,
+          twitterName: Meteor.users.findOne(justin).profile.twitterName,
+          twitterImage: Meteor.users.findOne(justin).profile.twitterImage
         },
         {
-          _id: barney,
-          twitterName: Meteor.users.findOne(barney).profile.twitterName,
-          twitterImage: Meteor.users.findOne(barney).profile.twitterImage
+          _id: kim,
+          twitterName: Meteor.users.findOne(kim).profile.twitterName,
+          twitterImage: Meteor.users.findOne(kim).profile.twitterImage
         },
         {
-          _id: claus,
-          twitterName: Meteor.users.findOne(claus).profile.twitterName,
-          twitterImage: Meteor.users.findOne(claus).profile.twitterImage
+          _id: bill,
+          twitterName: Meteor.users.findOne(bill).profile.twitterName,
+          twitterImage: Meteor.users.findOne(bill).profile.twitterImage
         },
       ]
     });
@@ -59,16 +58,17 @@ Meteor.startup(function () {
       slug: 'wwnrw-17',
       url: 'http://webworker-nrw.de',
       logoImage: "http://webworker-nrw.de/assets/images/WWNRW.png",
+      dateBegin: new Date("2025-06-11T00:00:00Z"),
       attendants: [
         {
-          _id: barney,
-          twitterName: Meteor.users.findOne(barney).profile.twitterName,
-          twitterImage: Meteor.users.findOne(barney).profile.twitterImage
+          _id: kim,
+          twitterName: Meteor.users.findOne(kim).profile.twitterName,
+          twitterImage: Meteor.users.findOne(kim).profile.twitterImage
         },
         {
-          _id: claus,
-          twitterName: Meteor.users.findOne(claus).profile.twitterName,
-          twitterImage: Meteor.users.findOne(claus).profile.twitterImage
+          _id: bill,
+          twitterName: Meteor.users.findOne(bill).profile.twitterName,
+          twitterImage: Meteor.users.findOne(bill).profile.twitterImage
         }
       ]
     });
@@ -78,8 +78,7 @@ Meteor.startup(function () {
       slug: 'leandus-4',
       url: 'http://leandus.de',
       logoImage: "https://www.leanuxdus.de/files/2015/01/logo-small-leandus.png",
-      dateBegin: new Date("2015-04-28T18:00:00Z"),
-      dateEnd: new Date("2015-04-28T22:00:00Z")
+      dateBegin: new Date("2025-04-11T00:00:00Z"),
     });
 
     Events.insert({
@@ -87,8 +86,7 @@ Meteor.startup(function () {
       slug: 'leanuxdus-3',
       url: 'http://leanuxdus.de',
       logoImage: "https://www.leandus.de/files/2015/01/logo-small-leanuxdus.png",
-      dateBegin: new Date("2015-02-24T18:00:00Z"),
-      dateEnd: new Date("2015-02-24T22:00:00Z")
+      dateBegin: new Date("2025-07-11T00:00:00Z"),
     });
 
   }

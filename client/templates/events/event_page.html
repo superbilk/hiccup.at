@@ -1,5 +1,36 @@
 <template name="eventPage">
-  <div class="event-page page">
-    {{> eventItem}}
+  <div class="page-header">
+    <h1><img src="{{logoImage}}" class="img-thumbnail" height="96px" width="96px"> {{title}}</h1>
   </div>
+  <div class="eventPage" id="{{_id}}">
+    <p>Webseite: <a href="{{url}}" target="_blank">{{title}}</a></p>
+
+    {{#unless currentUserAttending}}
+    <p><button href="" class="btn btn-lg btn-success join">Ich nehme teil!</button></p>
+    {{/unless}}
+
+    <hr>
+    <h2>{{attendantsCount}} Teilnehmer</h2>
+    {{#if attendants}}
+    <ul class="list-unstyled attendants">
+      {{#each attendants}}
+        {{> attendant}}
+      {{/each}}
+    </ul>
+    {{/if}}
+  </div>
+</template>
+
+<template name="attendant">
+  <li>
+    <div class="social">
+      <img src="{{twitterImage}}" class="img-rounded social-image" height="96px" width="96px">
+      {{> followButton user=twitterName}}
+      {{#if myTwitterAccount}}
+        <small>
+          <a href="" class="leave">Ich nehme doch nicht teil</a>
+        </small>
+      {{/if}}
+    </div>
+  </li>
 </template>

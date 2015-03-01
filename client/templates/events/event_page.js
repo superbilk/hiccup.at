@@ -1,4 +1,4 @@
-Template.eventItem.helpers({
+Template.eventPage.helpers({
   attendantsCount: function() {
     if (this.attendants === undefined) {
       return 0;
@@ -15,7 +15,7 @@ Template.eventItem.helpers({
   }
 });
 
-Template.eventItem.events({
+Template.eventPage.events({
   'click button.join': function(event){
     event.preventDefault();
     if (!Meteor.user()) {
@@ -49,7 +49,7 @@ Template.eventItem.events({
   }
 });
 
-Template.eventItem.rendered = function() {
+Template.eventPage.rendered = function() {
   Meteor.setTimeout(function() {
     window.twttr.widgets.load(this.firstNode);
   }, 0);
