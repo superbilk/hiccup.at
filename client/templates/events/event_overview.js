@@ -27,7 +27,6 @@ Template.eventOverview.events({
         if (error) {
           Alerts.add(error.message);
         };
-        twttr.widgets.load(this.firstNode);
       });
     }
   },
@@ -50,7 +49,4 @@ Template.eventOverview.events({
 });
 
 Template.eventOverview.rendered = function() {
-  Meteor.setTimeout(function() {
-    window.twttr.widgets.load(this.firstNode);
-  }, 0);
 };

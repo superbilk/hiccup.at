@@ -7,7 +7,6 @@ Tracker.autorun(function () {
         Alerts.add(error.message);
       };
       Router.go('eventPage', { slug: intent.slug });
-      twttr.widgets.load(this.firstNode);
     });
   }
 });

@@ -1,24 +1,38 @@
 <template name="eventPage">
   <div class="page-header">
-    <h1><img src="{{logoImage}}" class="img-thumbnail" height="96px" width="96px"> {{title}}</h1>
+    <h1>
+      <img src="{{logoImage}}" class="img-thumbnail" height="96px" width="96px"> {{title}}
+    </h1>
   </div>
+
+  {{#unless currentUserAttending}}
+    <p>
+      <button href="" class="btn btn-lg btn-success join btn-block">Ich nehme teil!</button>
+    </p>
+  {{/unless}}
+
   <div class="eventPage">
-    <p>Webseite: <a href="{{url}}" target="_blank">{{title}}</a></p>
+    <h2 class="">
+      {{attendantsCount}} Teilnehmer
+    </h2>
 
-    {{#unless currentUserAttending}}
-    <p><button href="" class="btn btn-lg btn-success join">Ich nehme teil!</button></p>
-    {{/unless}}
-
-    <hr>
-    <h2>{{attendantsCount}} Teilnehmer</h2>
     {{#if attendants}}
-    <ul class="list-unstyled attendants">
-      {{#each attendants}}
-        {{> attendant}}
-      {{/each}}
-    </ul>
+      <ul class="list-unstyled attendants">
+        {{#each attendants}}
+          {{> attendant}}
+        {{/each}}
+      </ul>
     {{/if}}
   </div>
+  <hr />
+  <h2>Organisiert von</h2>
+  <p>
+    <div class="social">
+      <img src="{{twitterOrganizerImage}}" class="img-rounded social-image" height="48px" width="48px">
+      {{> followButton user=twitterOrganizer}}
+    </div>
+  </p>
+  <p>Webseite: <a href="{{url}}" target="_blank">{{title}}</a></p>
 </template>
 
 <template name="attendant">

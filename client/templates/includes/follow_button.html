@@ -1,11 +1,9 @@
 <template name="followButton">
-  <a
-    class="twitter-follow-button"
-    href="https://twitter.com/{{user}}"
-    data-show-count="true"
-    data-lang="de"
-    data-size = "large"
-  >
-    Follow @{{user}}
-  </a>
+  <iframe
+    src="//platform.twitter.com/widgets/follow_button.html?screen_name={{user}}&lang=de&show_count=true&show_screen_name=true&size=l"
+    style="width: 300px; height: 35px;"
+    allowtransparency="true"
+    frameborder="0"
+    scrolling="no">
+  </iframe>
 </template>
