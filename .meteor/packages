@@ -8,7 +8,6 @@ meteor-platform
 twbs:bootstrap
 iron:router
 underscore
-sacha:spin
 ian:accounts-ui-bootstrap-3
 email
 momentjs:moment
@@ -22,3 +21,4 @@ audit-argument-checks
 tsega:bootstrap3-datetimepicker
 andruschka:bootstrap-cosmo
 rzymek:moment-locale-de
+pcel:loading
