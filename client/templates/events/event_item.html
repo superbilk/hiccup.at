@@ -27,9 +27,10 @@
 <template name="attendant">
   <li>
     <p>
-      <img src="{{twitterImage}}" class="img-rounded">
-      {{twitterName}}
-      {{> followButton user=twitterName}}
+      <div class="social">
+        <img src="{{twitterImage}}" class="img-rounded social-image">
+        {{> followButton user=twitterName}}
+      </div>
     </p>
   </li>
 </template>

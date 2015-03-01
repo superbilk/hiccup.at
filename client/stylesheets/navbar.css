@@ -19,3 +19,16 @@ body {
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
+
+
+.social iframe {
+  vertical-align: middle;
+}
+
+.social div span {
+  vertical-align:middle !important;
+}
+
+.social-image {
+  margin-right: 10px;
+}
