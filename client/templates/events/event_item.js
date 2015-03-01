@@ -19,8 +19,8 @@ Template.eventItem.events({
   'click button.join': function(event){
     event.preventDefault();
     if (!Meteor.user()) {
+      Session.set("joinIntent", this);
       $('#signInModal').modal('show');
-      // Alerts.add("Bitte mit Twitter anmelden.");
     }
     else {
       Meteor.call('joinEvent', this, function(error, result) {
@@ -50,7 +50,7 @@ Template.eventItem.events({
 });
 
 Template.eventItem.rendered = function() {
-  setTimeout(function() {
+  Meteor.setTimeout(function() {
     window.twttr.widgets.load(this.firstNode);
   }, 0);
 };
