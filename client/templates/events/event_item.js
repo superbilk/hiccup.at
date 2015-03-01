@@ -19,7 +19,8 @@ Template.eventItem.events({
   'click button.join': function(event){
     event.preventDefault();
     if (!Meteor.user()) {
-      Alerts.add("Bitte mit Twitter anmelden.");
+      $('#signInModal').modal('show');
+      // Alerts.add("Bitte mit Twitter anmelden.");
     }
     else {
       Meteor.call('joinEvent', this, function(error, result) {

@@ -11,5 +11,9 @@
     </div>
   </div>
 
+  {{#unless currentUser}}
+    {{> signInModal}}
+  {{/unless}}
+
   {{> footer}}
 </template>

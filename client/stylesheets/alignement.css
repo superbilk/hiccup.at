@@ -10,6 +10,11 @@
   margin-right: 10px;
 }
 
-ul.attendants li {
+ul.attendants > li {
   margin-bottom: 10px;
+}
+
+.login-button.btn.btn-block.btn-Twitter {
+  padding-left: 10px;
+  padding-right: 10px;
 }
