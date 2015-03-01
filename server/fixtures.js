@@ -12,7 +12,7 @@ Meteor.startup(function () {
     var kim = Meteor.users.insert({
       profile : {
         name: "Kim",
-        twitterName: "KimKardahian",
+        twitterName: "KimKardashian",
         twitterImage: "https://pbs.twimg.com/profile_images/2344348679/d7fhjj1t1mms16iq0m1p_400x400.jpeg"
       }
     });
