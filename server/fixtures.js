@@ -35,7 +35,7 @@ Meteor.startup(function () {
       twitterOrganizer: "beyondtellerrand",
       twitterOrganizerImage: "https://pbs.twimg.com/profile_images/478502156589617152/7WDu9XsV.jpeg",
       logoImage: "https://pbs.twimg.com/profile_images/478502156589617152/7WDu9XsV.jpeg",
-      dateBegin: new Date("2015-03-07T00:00:00Z"),
+      dateBegin: new Date("2015-05-11"),
       attendants: [
         {
           _id: justin,
@@ -95,6 +95,16 @@ Meteor.startup(function () {
       twitterOrganizerImage: "https://www.leandus.de/files/2015/01/logo-small-leanuxdus.png",
       logoImage: "https://www.leandus.de/files/2015/01/logo-small-leanuxdus.png",
       dateBegin: new Date("2015-08-07T00:00:00Z"),
+    });
+
+    Events.insert({
+      title: 'Meteor Cologne',
+      slug: 'meteor-cologne-1',
+      url: 'http://www.meetup.com/Meteor-Cologne/events/220454449/',
+      twitterOrganizer: "DerMambo",
+      twitterOrganizerImage: "https://pbs.twimg.com/profile_images/378800000123289551/1f63258a55d204a327ac2b5a1bf1d673_400x400.jpeg",
+      logoImage: "http://photos1.meetupstatic.com/photos/event/9/b/d/e/global_425859902.jpeg",
+      dateBegin: new Date("2015-03-12"),
     });
 
   }
