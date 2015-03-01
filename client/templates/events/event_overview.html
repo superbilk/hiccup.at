@@ -1,5 +1,10 @@
 <template name="eventOverview">
   <div class="eventOverview well">
+    <div class="eventOverview date pull-right">
+      <p class="h4">
+        {{formatDateShort dateBegin}}
+      </p>
+    </div>
     <h2>
       <img src="{{logoImage}}" class="img-thumbnail" height="96px" width="96px">
       {{title}}

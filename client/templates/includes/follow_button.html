@@ -1,7 +1,17 @@
-<template name="followButton">
+<template name="followButtonDesktop">
   <iframe
     src="//platform.twitter.com/widgets/follow_button.html?screen_name={{user}}&lang=de&show_count=true&show_screen_name=true&size=l"
     style="width: 300px; height: 35px;"
+    allowtransparency="true"
+    frameborder="0"
+    scrolling="no">
+  </iframe>
+</template>
+
+<template name="followButtonPhone">
+  <iframe
+    src="//platform.twitter.com/widgets/follow_button.html?screen_name={{user}}&lang=de&show_count=false&show_screen_name=true&size=l"
+    style="width: 200px; height: 35px;"
     allowtransparency="true"
     frameborder="0"
     scrolling="no">

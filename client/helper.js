@@ -4,6 +4,17 @@ Template.registerHelper('formatDate', function(date) {
   }
 });
 
+Template.registerHelper('formatDateShort', function(date) {
+  if (date) {
+    return moment(date).format('DD. MMMM');
+  }
+});
+
+Template.registerHelper('phoneScreen', function() {
+  return screen.width <= 767;
+});
+
+
 Template.registerHelper('pluralize', function(n, thing) {
   // fairly stupid pluralizer
   if (n === 1) {

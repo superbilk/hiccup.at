@@ -1,5 +1,10 @@
 <template name="eventPage">
   <div class="page-header">
+    <div class="eventOverview date pull-right">
+      <p class="h4">
+        {{formatDateShort dateBegin}}
+      </p>
+    </div>
     <h1>
       <img src="{{logoImage}}" class="img-thumbnail" height="96px" width="96px"> {{title}}
     </h1>
@@ -29,7 +34,11 @@
   <p>
     <div class="social">
       <img src="{{twitterOrganizerImage}}" class="img-rounded social-image" height="48px" width="48px">
-      {{> followButton user=twitterOrganizer}}
+      {{#if phoneScreen }}
+        {{> followButtonPhone user=twitterOrganizer}}
+      {{else}}
+        {{> followButtonDesktop user=twitterOrganizer}}
+      {{/if}}
     </div>
   </p>
   <p>Webseite: <a href="{{url}}" target="_blank">{{title}}</a></p>
@@ -39,7 +48,11 @@
   <li>
     <div class="social">
       <img src="{{twitterImage}}" class="img-rounded social-image" height="96px" width="96px">
-      {{> followButton user=twitterName}}
+      {{#if phoneScreen }}
+        {{> followButtonPhone user=twitterName}}
+      {{else}}
+        {{> followButtonDesktop user=twitterName}}
+      {{/if}}
       {{#if myTwitterAccount}}
         <small>
           <a href="" class="leave">Ich nehme doch nicht teil</a>
