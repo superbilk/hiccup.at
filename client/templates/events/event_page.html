@@ -12,11 +12,11 @@
   {{/unless}}
 
   <div class="eventPage">
-    <h2 class="">
-      {{attendantsCount}} Teilnehmer
-    </h2>
 
     {{#if attendants}}
+      <h2 class="">
+        {{attendantsCount}} Teilnehmer
+      </h2>
       <ul class="list-unstyled attendants">
         {{#each attendants}}
           {{> attendant}}
