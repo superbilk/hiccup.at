@@ -1,6 +1,11 @@
 Template.eventItem.helpers({
   attendantsCount: function() {
-    return this.attendants.length.toString();
+    if (this.attendants === undefined) {
+      return 0;
+    }
+    else {
+      return this.attendants.length;
+    }
   },
   currentUserAttending: function() {
     var found =  _.find(this.attendants, function(attendant){
