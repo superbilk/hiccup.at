@@ -35,7 +35,7 @@ Meteor.startup(function () {
       twitterOrganizer: "beyondtellerrand",
       twitterOrganizerImage: "https://pbs.twimg.com/profile_images/478502156589617152/7WDu9XsV.jpeg",
       logoImage: "https://pbs.twimg.com/profile_images/478502156589617152/7WDu9XsV.jpeg",
-      dateBegin: new Date("2015-05-11"),
+      dateBegin: new Date("2015-05-11T10:00:00Z"),
       attendants: [
         {
           _id: justin,
@@ -62,7 +62,7 @@ Meteor.startup(function () {
       twitterOrganizer: "wwnrw",
       twitterOrganizerImage: "http://webworker-nrw.de/assets/images/WWNRW.png",
       logoImage: "http://webworker-nrw.de/assets/images/WWNRW.png",
-      dateBegin: new Date("2015-06-07T00:00:00Z"),
+      dateBegin: new Date("2015-06-07T19:00:00Z"),
       attendants: [
         {
           _id: kim,
@@ -84,7 +84,7 @@ Meteor.startup(function () {
       twitterOrganizer: "Lean_DUS",
       twitterOrganizerImage: "https://www.leanuxdus.de/files/2015/01/logo-small-leandus.png",
       logoImage: "https://www.leanuxdus.de/files/2015/01/logo-small-leandus.png",
-      dateBegin: new Date("2015-04-07T00:00:00Z"),
+      dateBegin: new Date("2015-04-07T18:00:00Z"),
     });
 
     Events.insert({
@@ -94,7 +94,7 @@ Meteor.startup(function () {
       twitterOrganizer: "LeanUXDUS",
       twitterOrganizerImage: "https://www.leandus.de/files/2015/01/logo-small-leanuxdus.png",
       logoImage: "https://www.leandus.de/files/2015/01/logo-small-leanuxdus.png",
-      dateBegin: new Date("2015-08-07T00:00:00Z"),
+      dateBegin: new Date("2015-08-07T18:00:00Z"),
     });
 
     Events.insert({
@@ -104,7 +104,7 @@ Meteor.startup(function () {
       twitterOrganizer: "DerMambo",
       twitterOrganizerImage: "https://pbs.twimg.com/profile_images/378800000123289551/1f63258a55d204a327ac2b5a1bf1d673_400x400.jpeg",
       logoImage: "http://photos1.meetupstatic.com/photos/event/9/b/d/e/global_425859902.jpeg",
-      dateBegin: new Date("2015-03-12"),
+      dateBegin: new Date("2015-03-12T19:00:00Z"),
     });
 
   }
