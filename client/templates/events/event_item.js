@@ -3,14 +3,10 @@ Template.eventItem.helpers({
     return this.attendants.length.toString();
   },
   currentUserAttending: function() {
-    return _.find(this.attendants, function(attendant){
-      if (Meteor.user()) {
-        return attendant._id === Meteor.user()._id;
-      }
-      else {
-        return false;
-      }
+    var found =  _.find(this.attendants, function(attendant){
+      return attendant._id === Meteor.userId();
     });
+    return found;
   }
 });
 
@@ -29,13 +25,16 @@ Template.eventItem.events({
       });
     }
   },
-  'click button.leave': function(event){
+  'click a.leave': function(event){
     event.preventDefault();
+
+    var currentEvent = Template.parentData(0);
+
     if (!Meteor.user()) {
       Alerts.add("Bitte mit Twitter anmelden.");
     }
     else {
-      Meteor.call('leaveEvent', this, function(error, result) {
+      Meteor.call('leaveEvent', currentEvent, function(error, result) {
         if (error) {
           Alerts.add(error.message);
         };
@@ -49,3 +48,9 @@ Template.eventItem.rendered = function() {
     window.twttr.widgets.load(this.firstNode);
   }, 0);
 };
+
+Template.attendant.helpers({
+  myTwitterAccount: function() {
+    return this._id === Meteor.userId();
+  }
+});

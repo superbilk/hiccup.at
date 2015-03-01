@@ -1,36 +1,40 @@
 <template name="eventItem">
   <div class="eventItem well" id="{{_id}}">
-    <h2><img src="{{logoImage}}" class="img-thumbnail" height="48px" width="48px"> {{title}}</h2>
-    {{#if attendants}}
+    <h2>
+      <img src="{{logoImage}}" class="img-thumbnail" height="48px" width="48px">
+      {{title}}
+      <small class="">{{attendantsCount}} Teilnehmer</small>
+    </h2>
+    <p>Webseite: <a href="{{url}}" target="_blank">{{title}}</a></p>
+
+    {{#unless currentUserAttending}}
     <p>
-      Es sind {{attendantsCount}} Teilnehmer da!
+      <button href="" class="btn btn-lg btn-success join">Ich nehme teil!</button>
     </p>
+    {{/unless}}
+
+    {{#if attendants}}
+    <hr>
+    <h3>Wir sind alle da:</h3>
     <ul class="list-unstyled">
       {{#each attendants}}
         {{> attendant}}
       {{/each}}
     </ul>
-    {{else}}
-    <p>
-      Es ist noch niemand da.
-    </p>
     {{/if}}
-    {{#if currentUserAttending}}
-      <button href="#" class="btn btn-danger leave">Ich bin nicht da!</button>
-    {{else}}
-      <button href="#" class="btn btn-primary join">Ich bin da!</button>
-    {{/if}}
-    <p>Link: <a href="{{url}}" target="_blank">{{title}}</a></p>
   </div>
 </template>
 
 <template name="attendant">
   <li>
-    <p>
-      <div class="social">
-        <img src="{{twitterImage}}" class="img-rounded social-image">
-        {{> followButton user=twitterName}}
-      </div>
-    </p>
+    <div class="social">
+      <img src="{{twitterImage}}" class="img-rounded social-image">
+      {{> followButton user=twitterName}}
+      {{#if myTwitterAccount}}
+        <small>
+          <a href="" class="leave">Ich nehme doch nicht teil</a>
+        </small>
+      {{/if}}
+    </div>
   </li>
 </template>
