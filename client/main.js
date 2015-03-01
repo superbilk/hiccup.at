@@ -1,5 +1,7 @@
 accountsUIBootstrap3.setLanguage('de');
 
+moment.locale("de");
+
 Meteor.Spinner.options = {
     // lines: 13, // The number of lines to draw
     // length: 10, // The length of each line
