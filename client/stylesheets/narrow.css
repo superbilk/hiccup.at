@@ -37,11 +37,14 @@ body {
     display: block !important;
     margin-bottom: 10px;
   }
+  img.social-image {
+    margin-bottom: 10px !important;
+  }
   small {
     display: block !important;
   }
-  /*div.social img {
-    height: 20%;
-    width: 20%;
-  }*/
+  a.leave {
+    margin-top: 10px;
+    display: block !important;
+  }
 }
