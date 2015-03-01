@@ -54,3 +54,13 @@ Alerts.defaultOptions.fadeOut = 600;
 //      alertsLimit : 3
 //  }
 // Example: Alerts.defaultOptions.alertsLimit = 1;
+
+nextEventCountdown = function() {
+  var nextEvent = Events.findOne({ dateBegin: {
+    $exists: true,
+    $gte: new Date() }}, {
+    sort: { dateBegin: 1 }}
+  );
+  var countdown = moment(nextEvent.dateBegin).add(1, 'days').startOf('day').fromNow();
+  Session.set("countdown", countdown);
+};
