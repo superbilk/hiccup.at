@@ -37,21 +37,3 @@ body > .container {
 code {
   font-size: 80%;
 }
-
-
-
-.social iframe {
-  vertical-align: middle;
-}
-
-.social div span {
-  vertical-align:middle !important;
-}
-
-.social-image {
-  margin-right: 10px;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
