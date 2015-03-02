@@ -1,12 +1,12 @@
 Template.registerHelper('formatDate', function(date) {
   if (date) {
-    return moment(date).format('DD.MM.YYYY');
+    return moment.utc(date).format('DD.MM.YYYY');
   }
 });
 
 Template.registerHelper('formatDateShort', function(date) {
   if (date) {
-    return moment(date).format('DD. MMMM');
+    return moment.utc(date).format('DD. MMMM - HH:mm');
   }
 });
 
