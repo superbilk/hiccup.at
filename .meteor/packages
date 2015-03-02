@@ -5,7 +5,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-twbs:bootstrap
 iron:router
 underscore
 ian:accounts-ui-bootstrap-3
@@ -19,6 +18,7 @@ accounts-base
 mrt:bootstrap-alerts
 audit-argument-checks
 tsega:bootstrap3-datetimepicker
-andruschka:bootstrap-cosmo
 rzymek:moment-locale-de
 pcel:loading
+nemo64:bootstrap
+less
