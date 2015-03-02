@@ -12,6 +12,11 @@ Template.eventOverview.helpers({
       return attendant._id === Meteor.userId();
     });
     return found;
+  },
+  isToday: function() {
+    var begin = moment(this.dateBegin).startOf('day');
+    var end = moment(this.dateEnd).endOf('day');
+    return moment().isBetween(begin, end);
   }
 });
 

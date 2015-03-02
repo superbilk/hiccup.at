@@ -29,35 +29,6 @@ Meteor.startup(function () {
   if (Events.find().count() === 0) {
 
     Events.insert({
-      title: 'beyond tellerrand',
-      slug: 'bt-dus-2015',
-      url: 'http://beyondtellerrand.com',
-      twitterOrganizer: "btconf",
-      twitterOrganizerImage: "https://pbs.twimg.com/profile_images/478502156589617152/7WDu9XsV.jpeg",
-      logoImage: "https://pbs.twimg.com/profile_images/478502156589617152/7WDu9XsV.jpeg",
-      dateBegin: new Date("2015-05-11T10:00:00Z"),
-      dateEnd: new Date("2015-05-13T17:00:00Z"),
-      dateEnd: new Date("2015-05-13T22:00:00Z"),
-      attendants: [
-        {
-          _id: justin,
-          twitterName: Meteor.users.findOne(justin).profile.twitterName,
-          twitterImage: Meteor.users.findOne(justin).profile.twitterImage
-        },
-        {
-          _id: kim,
-          twitterName: Meteor.users.findOne(kim).profile.twitterName,
-          twitterImage: Meteor.users.findOne(kim).profile.twitterImage
-        },
-        {
-          _id: bill,
-          twitterName: Meteor.users.findOne(bill).profile.twitterName,
-          twitterImage: Meteor.users.findOne(bill).profile.twitterImage
-        },
-      ]
-    });
-
-    Events.insert({
       title: 'Webworker NRW',
       slug: 'wwnrw-17',
       url: 'http://webworker-nrw.de',
@@ -89,6 +60,23 @@ Meteor.startup(function () {
       logoImage: "https://www.leanuxdus.de/files/2015/01/logo-small-leandus.png",
       dateBegin: new Date("2015-04-07T18:00:00Z"),
       dateEnd: new Date("2015-04-07T22:00:00Z"),
+      attendants: [
+        {
+          _id: justin,
+          twitterName: Meteor.users.findOne(justin).profile.twitterName,
+          twitterImage: Meteor.users.findOne(justin).profile.twitterImage
+        },
+        {
+          _id: kim,
+          twitterName: Meteor.users.findOne(kim).profile.twitterName,
+          twitterImage: Meteor.users.findOne(kim).profile.twitterImage
+        },
+        {
+          _id: bill,
+          twitterName: Meteor.users.findOne(bill).profile.twitterName,
+          twitterImage: Meteor.users.findOne(bill).profile.twitterImage
+        },
+      ]
     });
 
     Events.insert({
@@ -103,6 +91,30 @@ Meteor.startup(function () {
     });
 
     Events.insert({
+      title: 'Lean UX DUS #123',
+      slug: 'leanuxdus-123',
+      url: 'http://leanuxdus.de',
+      twitterOrganizer: "LeanUXDUS",
+      twitterOrganizerImage: "https://www.leandus.de/files/2015/01/logo-small-leanuxdus.png",
+      logoImage: "https://www.leandus.de/files/2015/01/logo-small-leanuxdus.png",
+      dateBegin: new Date("2015-03-01T18:00:00Z"),
+      dateEnd: new Date("2015-03-21T22:00:00Z")
+    });
+
+// ECHTE EVENTS
+
+    Events.insert({
+      title: 'Lean DUS - Dev Talks #2',
+      slug: 'leandus-dev-2',
+      url: 'http://leandus.de',
+      twitterOrganizer: "Lean_DUS",
+      twitterOrganizerImage: "https://www.leanuxdus.de/files/2015/01/logo-small-leandus.png",
+      logoImage: "https://www.leanuxdus.de/files/2015/01/logo-small-leandus.png",
+      dateBegin: new Date("2015-03-25T18:00:00Z"),
+      dateEnd: new Date("2015-03-25T22:00:00Z"),
+    });
+
+    Events.insert({
       title: 'Meteor Cologne',
       slug: 'meteor-cologne-1',
       url: 'http://www.meetup.com/Meteor-Cologne/events/220454449/',
@@ -111,6 +123,17 @@ Meteor.startup(function () {
       logoImage: "http://photos1.meetupstatic.com/photos/event/9/b/d/e/global_425859902.jpeg",
       dateBegin: moment("2015-03-12T19:00:00"),
       dateEnd: moment("2015-03-12T22:00:00")
+    });
+
+    Events.insert({
+      title: 'beyond tellerrand',
+      slug: 'bt-dus-2015',
+      url: 'http://beyondtellerrand.com',
+      twitterOrganizer: "btconf",
+      twitterOrganizerImage: "https://pbs.twimg.com/profile_images/478502156589617152/7WDu9XsV.jpeg",
+      logoImage: "https://pbs.twimg.com/profile_images/478502156589617152/7WDu9XsV.jpeg",
+      dateBegin: new Date("2015-05-11T10:00:00Z"),
+      dateEnd: new Date("2015-05-13T17:00:00Z"),
     });
 
   }

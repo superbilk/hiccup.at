@@ -6,7 +6,7 @@ Template.registerHelper('formatDate', function(date) {
 
 Template.registerHelper('formatDateShort', function(date) {
   if (date) {
-    return moment.utc(date).format('DD. MMMM - HH:mm');
+    return moment.utc(date).format('DD. MMMM - HH:mm[h]');
   }
 });
 

@@ -2,13 +2,15 @@
   <div class="eventOverview well">
     <div class="eventOverview date pull-right">
       <p class="h4">
+        {{#if isToday}}
+          <span class="label label-warning">Heute!</span>
+        {{/if}}
         {{formatDateShort dateBegin}}
       </p>
     </div>
     <h2>
       <img src="{{logoImage}}" class="img-thumbnail" height="96px" width="96px">
       {{title}}
-      <small class="">{{attendantsCount}} Teilnehmer</small>
     </h2>
     <hr />
     <p>
@@ -20,7 +22,7 @@
 
     {{#if attendants}}
     <hr />
-    <h3>Teilnehmer</h3>
+    <h3>{{attendantsCount}} Teilnehmer</h3>
     {{#each attendants}}
       <img src="{{twitterImage}}" class="img-rounded social-image" height="72px" width="72px">
     {{/each}}
