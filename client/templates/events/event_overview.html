@@ -4,8 +4,10 @@
       <p class="h4">
         {{#if isToday}}
           <span class="label label-warning">{{_ "today"}}</span>&nbsp;
+          {{formatTime dateBegin}}
+        {{ else }}
+          {{formatDateShort dateBegin}}
         {{/if}}
-        {{formatDateShort dateBegin}}
       </p>
     </div>
     <h2>

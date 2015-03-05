@@ -12,6 +12,11 @@ Template.eventPage.helpers({
       return attendant._id === Meteor.userId();
     });
     return found;
+  },
+  tweetContent: function() {
+    var currentUrl = "http://hiccup.at" + Router.current().route.path(this);
+    var tweet = TAPi18n.__("tweet", { title: this.title, url: currentUrl } );
+    return encodeURIComponent(tweet);
   }
 });
 

@@ -10,6 +10,12 @@ Template.registerHelper('formatDateShort', function(date) {
   }
 });
 
+Template.registerHelper('formatTime', function(date) {
+  if (date) {
+    return moment.utc(date).format('HH:mm[h]');
+  }
+});
+
 Template.registerHelper('phoneScreen', function() {
   return screen.width <= 767;
 });
@@ -19,7 +25,6 @@ Template.registerHelper('isToday', function() {
   var end = moment(this.dateEnd).endOf('day');
   return moment().isBetween(begin, end);
 });
-
 
 
 Template.registerHelper('pluralize', function(n, thing) {

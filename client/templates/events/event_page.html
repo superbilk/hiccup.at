@@ -4,8 +4,10 @@
       <p class="h4">
         {{#if isToday}}
           <span class="label label-warning">{{_ "today"}}</span>&nbsp;
+          {{formatTime dateBegin}}
+        {{ else }}
+          {{formatDateShort dateBegin}}
         {{/if}}
-        {{formatDateShort dateBegin}}
       </p>
     </div>
     <h1>
@@ -18,6 +20,10 @@
       <button href="" class="btn btn-lg btn-success join btn-block">{{_ "button_join"}}</button>
     </p>
   {{/unless}}
+
+  <p>
+    <a href="http://twitter.com/intent/tweet?text={{ tweetContent }}" target="_blank" class="btn btn-lg btn-primary tell btn-block"><i class="fa fa-twitter"></i> {{_ "button_tell" }}</a>
+  </p>
 
   <div class="eventPage">
 

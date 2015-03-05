@@ -16,5 +16,7 @@
   "website": "Website",
   "sign_in_twitter": "Sign in with Twitter",
   "button_close": "Close",
-  "link_leave": "Sorry, I'm not attending"
+  "link_leave": "Sorry, I'm not attending",
+  "button_tell": "that you are here",
+  "tweet": "I'm at \"__title__\". Check in and join me: __url__ #hiccup"
 }
