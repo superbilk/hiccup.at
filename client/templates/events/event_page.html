@@ -2,6 +2,9 @@
   <div class="page-header">
     <div class="eventOverview date pull-right">
       <p class="h4">
+        {{#if isToday}}
+          <span class="label label-warning">{{_ "today"}}</span>&nbsp;
+        {{/if}}
         {{formatDateShort dateBegin}}
       </p>
     </div>

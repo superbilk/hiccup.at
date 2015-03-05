@@ -14,6 +14,13 @@ Template.registerHelper('phoneScreen', function() {
   return screen.width <= 767;
 });
 
+Template.registerHelper('isToday', function() {
+  var begin = moment(this.dateBegin).startOf('day');
+  var end = moment(this.dateEnd).endOf('day');
+  return moment().isBetween(begin, end);
+});
+
+
 
 Template.registerHelper('pluralize', function(n, thing) {
   // fairly stupid pluralizer
