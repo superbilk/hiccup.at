@@ -21,6 +21,6 @@ nextEventCountdown = function() {
     $gte: new Date() }}, {
     sort: { dateBegin: 1 }}
   );
-  var countdown = moment(nextEvent.dateBegin).fromNow();
+  var countdown = moment.utc(nextEvent.dateBegin).fromNow();
   Session.set("countdown", countdown);
 };

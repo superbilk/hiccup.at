@@ -121,8 +121,19 @@ Meteor.startup(function () {
       twitterOrganizer: "DerMambo",
       twitterOrganizerImage: "https://pbs.twimg.com/profile_images/378800000123289551/1f63258a55d204a327ac2b5a1bf1d673_400x400.jpeg",
       logoImage: "http://photos1.meetupstatic.com/photos/event/9/b/d/e/global_425859902.jpeg",
-      dateBegin: moment("2015-03-12T19:00:00"),
-      dateEnd: moment("2015-03-12T22:00:00")
+      dateBegin: new Date("2015-03-12T19:00:00"),
+      dateEnd: new Date("2015-03-12T22:00:00")
+    });
+
+    Events.insert({
+      title: 'Meteor Paris S02E05',
+      slug: 'meteor-paris-S02E05',
+      url: 'http://www.meetup.com/Meteor-Paris/events/220498616/',
+      twitterOrganizer: "meteorjs",
+      twitterOrganizerImage: "https://pbs.twimg.com/profile_images/527039622434418688/uJPMDhZq_400x400.png",
+      logoImage: "http://photos4.meetupstatic.com/photos/event/b/2/9/0/global_416205712.jpeg",
+      dateBegin: new Date("2015-03-05T19:00:00"),
+      dateEnd: new Date("2015-03-05T22:30:00")
     });
 
     Events.insert({
