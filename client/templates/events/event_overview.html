@@ -3,7 +3,7 @@
     <div class="eventOverview date pull-right">
       <p class="h4">
         {{#if isToday}}
-          <span class="label label-warning">Heute!</span>&nbsp;
+          <span class="label label-warning">{{_ "today"}}</span>&nbsp;
         {{/if}}
         {{formatDateShort dateBegin}}
       </p>
@@ -14,15 +14,15 @@
     </h2>
     <hr />
     <p>
-      <a href="{{pathFor 'eventPage'}}" class="btn btn-lg btn-primary">Mehr Infos</a>
+      <a href="{{pathFor 'eventPage'}}" class="btn btn-lg btn-primary">{{_ "button_more_infos"}}</a>
       {{#unless currentUserAttending}}
-        <button href="" class="btn btn-lg btn-success join">Ich nehme teil!</button>
+        <button href="" class="btn btn-lg btn-success join">{{_ "button_join"}}</button>
       {{/unless}}
     </p>
 
     {{#if attendants}}
     <hr />
-    <h3>{{attendantsCount}} Teilnehmer</h3>
+    <h3>{{attendantsCount}} {{_ "attendees"}}</h3>
     {{#each attendants}}
       <img src="{{twitterImage}}" class="img-rounded social-image" height="48px" width="48px">
     {{/each}}

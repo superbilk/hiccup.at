@@ -12,7 +12,7 @@
 
   {{#unless currentUserAttending}}
     <p>
-      <button href="" class="btn btn-lg btn-success join btn-block">Ich nehme teil!</button>
+      <button href="" class="btn btn-lg btn-success join btn-block">{{_ "button_join"}}</button>
     </p>
   {{/unless}}
 
@@ -20,7 +20,7 @@
 
     {{#if attendants}}
       <h2 class="">
-        {{attendantsCount}} Teilnehmer
+        {{attendantsCount}} {{_ "attendees"}}
       </h2>
       <ul class="list-unstyled attendants">
         {{#each attendants}}
@@ -30,7 +30,7 @@
     {{/if}}
   </div>
   <hr />
-  <h2>Organisiert von</h2>
+  <h2>{{_ "organized_by"}}</h2>
   <p>
     <div class="social">
       <img src="{{twitterOrganizerImage}}" class="img-rounded social-image" height="48px" width="48px">
@@ -41,7 +41,7 @@
       {{/if}}
     </div>
   </p>
-  <p>Webseite: <a href="{{url}}" target="_blank">{{title}}</a></p>
+  <p>{{_ "website"}}: <a href="{{url}}" target="_blank">{{title}}</a></p>
 </template>
 
 <template name="attendant">
@@ -55,7 +55,7 @@
       {{/if}}
       {{#if myTwitterAccount}}
         <small>
-          <a href="" class="leave">Ich nehme doch nicht teil</a>
+          <a href="" class="leave">{{_ "link_leave"}}</a>
         </small>
       {{/if}}
     </div>

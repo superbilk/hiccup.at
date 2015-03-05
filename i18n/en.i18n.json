@@ -1,0 +1,20 @@
+{
+  /*navbar.html|main.html*/
+  "brand": "Who is here?",
+
+  /*layout.html*/
+  "add_new_event": "Add new event",
+  "next_event": "Next event",
+  /*event_overview*/
+  "button_more_infos": "More...",
+  "button_join": "Hi, I'm here!",
+  "today": "Today!",
+
+  "attendees": "attendees",
+  "contact": "Contact",
+  "organized_by": "Organized by",
+  "website": "Website",
+  "sign_in_twitter": "Sign in with Twitter",
+  "button_close": "Close",
+  "link_leave": "Sorry, I'm not attending"
+}

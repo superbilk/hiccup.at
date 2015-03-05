@@ -1,7 +1,3 @@
-accountsUIBootstrap3.setLanguage('de');
-
-moment.locale("de");
-
 Alerts.defaultOptions.autoHide = 6000;
 Alerts.defaultOptions.fadeIn = 600;
 Alerts.defaultOptions.fadeOut = 600;
