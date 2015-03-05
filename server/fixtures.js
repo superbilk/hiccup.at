@@ -147,5 +147,15 @@ Meteor.startup(function () {
       dateEnd: new Date("2015-05-13T17:00:00Z"),
     });
 
+    Events.insert({
+      title: '2. Ansible Meetup Düsseldorf',
+      slug: 'ansible-duesseldorf-2',
+      url: 'http://www.meetup.com/Ansible-Meetup-Dusseldorf/events/220945485/',
+      twitterOrganizer: "dictvm",
+      twitterOrganizerImage: "https://pbs.twimg.com/profile_images/512014618227523584/E_3IuDgo_400x400.jpeg",
+      logoImage: "http://cdn2.hubspot.net/hub/330046/file-769078210-png/Official_Logos/ansible_logo_black_square_small.png",
+      dateBegin: new Date("2015-03-18T19:00:00"),
+      dateEnd: new Date("2015-03-18T22:00:00")
+    });
   }
 });
