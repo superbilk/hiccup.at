@@ -1,4 +1,4 @@
-// rename to credentials.json
+// rename to settings.json
 {
   "sendgrid": {
     "username": "me",

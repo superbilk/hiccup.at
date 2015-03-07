@@ -3,9 +3,9 @@ Meteor.startup(function () {
     { service: "twitter" },
     {
       $set: {
-        consumerKey: Credentials.twitter.consumerKey,
+        consumerKey: Meteor.settings.twitter.consumerKey,
         loginStyle: "popup",
-        secret: Credentials.twitter.secret
+        secret: Meteor.settings.twitter.secret
       }
     }
   );

@@ -3,7 +3,7 @@
   "brand": "Who is here?",
 
   /*layout.html*/
-  "add_new_event": "Add new event",
+  "add_new_event": "Add your event",
   "next_event": "Next event",
   /*event_overview*/
   "button_more_infos": "More...",
