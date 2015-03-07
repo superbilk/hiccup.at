@@ -157,5 +157,17 @@ Meteor.startup(function () {
       dateBegin: new Date("2015-03-18T19:00:00"),
       dateEnd: new Date("2015-03-18T22:00:00")
     });
+
+    Events.insert({
+      title: 'Barcamp Berlin',
+      slug: 'barcamp-berlin',
+      url: 'http://barcamp.berlin',
+      twitterOrganizer: "barcampBER",
+      twitterOrganizerImage: "https://pbs.twimg.com/profile_images/547158085538570240/u4DxIK6H_400x400.png",
+      logoImage: "https://pbs.twimg.com/profile_images/547158085538570240/u4DxIK6H_400x400.png",
+      dateBegin: new Date("2015-03-07T10:00:00"),
+      dateEnd: new Date("2015-03-08T18:00:00")
+    });
+
   }
 });
