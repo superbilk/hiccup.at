@@ -10,7 +10,8 @@
   "button_join": "Hi, I'm here!",
   "today": "Today!",
 
-  "attendees": "attendees",
+  "attendees": "One attendee",
+  "attendees_plural": "__count__ attendees",
   "contact": "Contact",
   "organized_by": "Organized by",
   "website": "Website",
