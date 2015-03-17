@@ -10,7 +10,7 @@ Accounts.onCreateUser(function(options, user) {
 
   if (user.services.twitter) {
     user.profile.twitterName = user.services.twitter.screenName;
-    user.profile.twitterImage = user.services.twitter.profile_image_url;
+    user.profile.twitterImage = user.services.twitter.profile_image_url_https;
   };
   return user;
 });

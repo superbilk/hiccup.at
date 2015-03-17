@@ -1,18 +1,18 @@
 Template.eventEdit.rendered = function() {
-  console.log(moment.utc(this.data.dateBegin).format());
+  console.log(moment(this.data.dateBegin).format());
   $('#datetimepickerBegin').datetimepicker({
     locale: 'de',
     // minDate: moment(),
     sideBySide: true,
     stepping: 15,
-    defaultDate: moment.utc(this.data.dateBegin).format()
+    defaultDate: moment(this.data.dateBegin).format()
   });
   $('#datetimepickerEnd').datetimepicker({
     locale: 'de',
     // minDate: moment(),
     sideBySide: true,
     stepping: 15,
-    defaultDate: moment.utc(this.data.dateEnd).format()
+    defaultDate: moment(this.data.dateEnd).format()
   });
   $("#datetimepickerBegin").on("dp.change", function (e) {
     $('#datetimepickerEnd').data("DateTimePicker").minDate(e.date);

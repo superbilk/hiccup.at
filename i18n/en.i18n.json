@@ -1,11 +1,9 @@
 {
-  /*navbar.html|main.html*/
   "brand": "Who is here?",
 
-  /*layout.html*/
   "add_new_event": "Add your event",
   "next_event": "Next event",
-  /*event_overview*/
+
   "button_more_infos": "More...",
   "button_join": "Hi, I'm here!",
   "today": "Today!",

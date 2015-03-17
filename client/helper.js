@@ -1,18 +1,18 @@
 Template.registerHelper('formatDate', function(date) {
   if (date) {
-    return moment.utc(date).format('DD.MM.YYYY');
+    return moment(date).format('DD.MM.YYYY');
   }
 });
 
 Template.registerHelper('formatDateShort', function(date) {
   if (date) {
-    return moment.utc(date).format('DD. MMMM - HH:mm[h]');
+    return moment(date).format('DD. MMMM - HH:mm[h]');
   }
 });
 
 Template.registerHelper('formatTime', function(date) {
   if (date) {
-    return moment.utc(date).format('HH:mm[h]');
+    return moment(date).format('HH:mm[h]');
   }
 });
 

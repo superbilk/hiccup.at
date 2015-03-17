@@ -1,16 +1,15 @@
 {
-  /*navbar*/
   "brand": "Wer ist hier?",
 
-  /*layout.html*/
   "add_new_event": "Neuen Event eintragen",
   "next_event": "Nächster Event",
-  /*event_overview*/
+
   "button_more_infos": "Mehr Infos",
   "button_join": "Ich bin da!",
   "today": "Heute!",
 
-  "attendees": "Teilnehmer",
+  "attendees": "Ein Teilnehmer",
+  "attendees_plural": "__count__ Teilnehmer",
   "contact": "Kontakt",
   "organized_by": "Organisiert von",
   "website": "Webseite",
@@ -19,5 +18,4 @@
   "link_leave": "Ich nehme doch nicht teil",
   "button_tell": "ich bin hier",
   "tweet": "Ich bin bei \"__title__\". Komm und schau wer noch da ist: __url__ #hiccup"
-
 }
