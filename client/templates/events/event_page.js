@@ -14,7 +14,7 @@ Template.eventPage.helpers({
     return found;
   },
   tweetContent: function() {
-    var currentUrl = "https://hiccup.at" + Router.current().route.path(this);
+    var currentUrl = Meteor.settings.public.ROOT_URL + Router.current().route.path(this);
     var tweet = TAPi18n.__("tweet", { title: this.title, url: currentUrl } );
     return encodeURIComponent(tweet);
   }
