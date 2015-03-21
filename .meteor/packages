@@ -27,3 +27,7 @@ fortawesome:fontawesome
 tap:i18n
 # tap:i18n-ui
 force-ssl
+meteorhacks:npm
+
+
+npm-container

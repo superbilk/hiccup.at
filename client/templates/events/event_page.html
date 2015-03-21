@@ -21,11 +21,11 @@
     </p>
   {{/unless}}
 
-  <p>
-    <a href="http://twitter.com/intent/tweet?text={{ tweetContent }}" class="btn btn-lg btn-primary tell btn-block"><i class="fa fa-twitter"></i> {{_ "button_tell" }}</a>
-  </p>
-
   <div class="eventPage">
+
+    {{#if currentUser}}
+      {{> addAttendee }}
+    {{/if}}
 
     {{#if attendants}}
       <h2 class="">
@@ -43,11 +43,7 @@
   <p>
     <div class="social">
       <img src="{{twitterOrganizerImage}}" class="img-rounded social-image" height="48px" width="48px">
-      {{#if phoneScreen }}
-        {{> followButtonPhone user=twitterOrganizer}}
-      {{else}}
-        {{> followButtonDesktop user=twitterOrganizer}}
-      {{/if}}
+      {{> followButton user=twitterOrganizer}}
     </div>
   </p>
   <p>{{_ "website"}}: <a href="{{url}}" target="_blank">{{title}}</a></p>
@@ -57,13 +53,10 @@
   <li>
     <div class="social">
       <img src="{{twitterImage}}" class="img-rounded social-image" height="48px" width="48px">
-      {{#if phoneScreen }}
-        {{> followButtonPhone user=twitterName}}
-      {{else}}
-        {{> followButtonDesktop user=twitterName}}
-      {{/if}}
+      {{> followButton user=twitterName}}
       {{#if myTwitterAccount}}
         <small>
+          <a href="https://twitter.com/intent/tweet?text={{ tweetContent }}" class="btn btn-sm btn-primary tell"><i class="fa fa-twitter"></i> {{_ "button_tell" }}</a>
           <a href="" class="leave">{{_ "link_leave"}}</a>
         </small>
       {{/if}}
