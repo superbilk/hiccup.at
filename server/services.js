@@ -5,7 +5,7 @@ Meteor.startup(function () {
       $set: {
         consumerKey: Meteor.settings.twitter.consumerKey,
         loginStyle: "popup",
-        secret: Meteor.settings.twitter.secret
+        secret: Meteor.settings.twitter.consumerSecret
       }
     }
   );
