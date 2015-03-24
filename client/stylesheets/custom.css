@@ -1,0 +1,15 @@
+.social-image {
+  margin-right: 5px;
+}
+
+ul.attendants > li {
+  margin-bottom: 10px;
+}
+
+.alert {
+  margin-top: 20px;
+}
+
+iframe[id^=twitter-widget] {
+  vertical-align: middle;
+}
