@@ -12,14 +12,11 @@
     </div>
     <h1>
       <img src="{{logoImage}}" class="img-thumbnail" height="96px" width="96px"> {{title}}
+      {{#unless currentUserAttending}}
+        <button href="" class="btn btn-lg btn-success join">{{_ "button_join"}}</button>
+      {{/unless}}
     </h1>
   </div>
-
-  {{#unless currentUserAttending}}
-    <p>
-      <button href="" class="btn btn-lg btn-success join btn-block">{{_ "button_join"}}</button>
-    </p>
-  {{/unless}}
 
   <div class="eventPage">
 

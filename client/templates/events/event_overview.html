@@ -14,6 +14,9 @@
     <h2>
       <a href="{{pathFor 'eventPage'}}"><img src="{{logoImage}}" class="img-thumbnail" height="96px" width="96px"></a>
       <a href="{{pathFor 'eventPage'}}">{{title}}</a>
+      {{#unless currentUserAttending}}
+        <button href="" class="btn btn-lg btn-success join">{{_ "button_join"}}</button>
+      {{/unless}}
     </h2>
 
     {{#if attendants}}
@@ -24,9 +27,6 @@
     {{else}}
         <hr />
     {{/if}}
-    {{#unless currentUserAttending}}
-      <button href="" class="btn btn-lg btn-success join">{{_ "button_join"}}</button>
-    {{/unless}}
 
   </div>
 </template>
