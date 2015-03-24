@@ -16,10 +16,6 @@ Template.registerHelper('formatTime', function(date) {
   }
 });
 
-Template.registerHelper('phoneScreen', function() {
-  return window.width <= 767;
-});
-
 Template.registerHelper('isToday', function() {
   var begin = moment(this.dateBegin).startOf('day');
   var end = moment(this.dateEnd).endOf('day');

@@ -1,19 +1,9 @@
 <template name="followButton">
-{{#if phoneScreen}}
-  <iframe
-    src="//platform.twitter.com/widgets/follow_button.html?screen_name={{user}}&lang={{languageTag}}&show_count=false&show_screen_name=true&size=l"
-    style="width: 200px; height: 35px;"
-    allowtransparency="true"
-    frameborder="0"
-    scrolling="no">
-  </iframe>
-{{else}}
   <iframe
     src="//platform.twitter.com/widgets/follow_button.html?screen_name={{user}}&lang={{languageTag}}&show_count=true&show_screen_name=true&size=l"
-    style="width: 300px; height: 35px;"
+    style="width: 270px; height: 40px;"
     allowtransparency="true"
     frameborder="0"
     scrolling="no">
   </iframe>
-{{/if}}
 </template>
