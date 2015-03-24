@@ -16,6 +16,7 @@ Accounts.onCreateUser(function(options, user) {
 });
 
 Accounts.onLogin(function(options){
+  // console.log(options);
   // console.log("twitterId:", options.user.services.twitter.id);
   // console.log("_id:", options.user._id);
   // console.log("twittername:", options.user.profile.twitterName);
