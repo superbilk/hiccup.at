@@ -10,24 +10,23 @@
         {{/if}}
       </p>
     </div>
+
     <h2>
-      <img src="{{logoImage}}" class="img-thumbnail" height="96px" width="96px">
-      {{title}}
+      <a href="{{pathFor 'eventPage'}}"><img src="{{logoImage}}" class="img-thumbnail" height="96px" width="96px"></a>
+      <a href="{{pathFor 'eventPage'}}">{{title}}</a>
     </h2>
-    <hr />
-    <p>
-      <a href="{{pathFor 'eventPage'}}" class="btn btn-lg btn-primary">{{_ "button_more_infos"}}</a>
-      {{#unless currentUserAttending}}
-        <button href="" class="btn btn-lg btn-success join">{{_ "button_join"}}</button>
-      {{/unless}}
-    </p>
 
     {{#if attendants}}
-    <hr />
-    <h3>{{_ "attendees" count=attendantsCount}}</h3>
-    {{#each attendants}}
-      <img src="{{twitterImage}}" class="img-rounded social-image" height="48px" width="48px">
-    {{/each}}
+      <h3>{{_ "attendees" count=attendantsCount}}</h3>
+      {{#each attendants}}
+        <img src="{{twitterImage}}" class="img-rounded social-image" height="48px" width="48px">
+      {{/each}}
+    {{else}}
+        <hr />
     {{/if}}
+    {{#unless currentUserAttending}}
+      <button href="" class="btn btn-lg btn-success join">{{_ "button_join"}}</button>
+    {{/unless}}
+
   </div>
 </template>

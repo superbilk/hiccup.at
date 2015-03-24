@@ -17,7 +17,7 @@ Template.registerHelper('formatTime', function(date) {
 });
 
 Template.registerHelper('phoneScreen', function() {
-  return screen.width <= 767;
+  return window.width <= 767;
 });
 
 Template.registerHelper('isToday', function() {
