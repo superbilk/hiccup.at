@@ -18,6 +18,11 @@
     </h1>
   </div>
 
+  <a href="https://twitter.com/intent/tweet?text={{ tweetContent }}" class="btn btn-primary tell"><i class="fa fa-twitter"></i> {{_ "button_tell" }}</a>
+  {{#if currentUserAttending}}
+    <a href="" class="leave"> {{_ "link_leave"}}</a>
+  {{/if}}
+
   {{#if attendants}}
     <h2 class="">
       {{_ "attendees" count=attendantsCount}}
@@ -33,10 +38,6 @@
     <hr />
     {{> addAttendee }}
   {{/if}}
-
-  <hr />
-  <a href="https://twitter.com/intent/tweet?text={{ tweetContent }}" class="btn btn-sm btn-primary tell"><i class="fa fa-twitter"></i> {{_ "button_tell" }}</a>
-  <a href="" class="leave"> {{_ "link_leave"}}</a>
 
   <hr />
   <h2>{{_ "organized_by"}}</h2>
