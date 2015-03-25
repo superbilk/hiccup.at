@@ -50,6 +50,7 @@ less@1.0.13
 livedata@1.0.13
 localstorage@1.0.3
 logging@1.0.7
+manuelschoebel:ms-seo@0.4.1
 meteor@1.1.5
 meteor-platform@1.2.2
 meteorhacks:async@1.0.0
@@ -85,6 +86,7 @@ service-configuration@1.0.4
 session@1.1.0
 spacebars@1.0.6
 spacebars-compiler@1.0.5
+spiderable@1.0.7
 stylus@1.0.7
 tap:i18n@1.4.1
 tap:i18n-ui@0.6.0

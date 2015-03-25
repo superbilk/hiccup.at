@@ -31,7 +31,3 @@ Template.registerHelper('pluralize', function(n, thing) {
     return n + ' ' + thing + 's';
   }
 });
-
-Deps.autorun(function(){
-  document.title = Session.get("DocumentTitle") || "hiccup.at";
-});
