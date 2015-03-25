@@ -12,6 +12,15 @@ Accounts.onCreateUser(function(options, user) {
     user.profile.twitterName = user.services.twitter.screenName;
     user.profile.twitterImage = user.services.twitter.profile_image_url_https;
   };
+
+  Email.send({
+    from: "hello@hiccup.at",
+    to: "hello@hiccup.at",
+    subject: "New User signup",
+    text: user.services.twitter.screenName
+  });
+
+  console.log("New user signup:", user.services.twitter.screenName);
   return user;
 });
 
