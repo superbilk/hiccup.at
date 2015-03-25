@@ -17,7 +17,7 @@ Accounts.onCreateUser(function(options, user) {
     from: "hello@hiccup.at",
     to: "hello@hiccup.at",
     subject: "New User signup",
-    text: user.services.twitter.screenName
+    text: "https://twitter.com/@" + user.services.twitter.screenName
   });
 
   console.log("New user signup:", user.services.twitter.screenName);
