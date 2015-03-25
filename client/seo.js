@@ -3,7 +3,8 @@ Meteor.startup(function() {
     return SEO.config({
       title: 'hiccup.at',
       meta: {
-        'description': ''
+        'description': '',
+        'google-site-verification': "89mf5oFKnjb9_uQNchsJAvBcvKktkjeRc-rS4AERqsg"
       }
     });
   }
