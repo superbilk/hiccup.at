@@ -18,7 +18,7 @@
     </h1>
   </div>
 
-  <a href="https://twitter.com/intent/tweet?text={{ tweetContent }}" class="btn btn-primary tell"><i class="fa fa-twitter"></i> {{_ "button_tell" }}</a>
+  <a href="https://twitter.com/intent/tweet?text={{urlEncode tweetContent}}&hashtags=hiccup,{{hashtag}}&url={{urlEncode currentUrl}}" class="btn btn-primary tell"><i class="fa fa-twitter"></i> {{_ "button_tell" }}</a>
   {{#if currentUserAttending}}
     <a href="" class="leave"> {{_ "link_leave"}}</a>
   {{/if}}

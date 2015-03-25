@@ -14,9 +14,16 @@ Template.eventPage.helpers({
     return found;
   },
   tweetContent: function() {
-    var currentUrl = Meteor.settings.public.ROOT_URL + Router.current().route.path(this);
-    var tweet = TAPi18n.__("tweet", { title: this.title, url: currentUrl } );
-    return encodeURIComponent(tweet);
+    var tweet = TAPi18n.__("tweet", {
+      twitterEvent: this.twitterOrganizer
+    });
+    return tweet;
+  },
+  currentUrl: function() {
+    return Router.current().url;
+  },
+  urlEncode: function(content) {
+    return encodeURIComponent(content);
   }
 });
 

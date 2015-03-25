@@ -17,6 +17,6 @@
   "button_close": "Schliessen",
   "link_leave": "Ich nehme doch nicht teil",
   "button_tell": "ich bin hier",
-  "tweet": "Ich bin bei \"__title__\". Komm und schau wer noch da ist: __url__ #hiccup",
+  "tweet": "Ich bin bei @__twitterEvent__. Komm und schau wer noch da ist:",
   "is_here": "ist hier"
 }
