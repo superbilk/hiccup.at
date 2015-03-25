@@ -42,7 +42,7 @@ Template.eventPage.events({
       });
     }
   },
-  'click a.leave': function(event){
+  'click button.leave': function(event){
     event.preventDefault();
 
     var currentEvent = Template.parentData(0);
