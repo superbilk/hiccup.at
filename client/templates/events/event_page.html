@@ -18,23 +18,26 @@
     </h1>
   </div>
 
-  <div class="eventPage">
+  {{#if attendants}}
+    <h2 class="">
+      {{_ "attendees" count=attendantsCount}}
+    </h2>
+    <ul class="list-unstyled attendants">
+      {{#each attendants}}
+        {{> attendant}}
+      {{/each}}
+    </ul>
+  {{/if}}
 
-    {{#if currentUser}}
-      {{> addAttendee }}
-    {{/if}}
+  {{#if currentUser}}
+    <hr />
+    {{> addAttendee }}
+  {{/if}}
 
-    {{#if attendants}}
-      <h2 class="">
-        {{_ "attendees" count=attendantsCount}}
-      </h2>
-      <ul class="list-unstyled attendants">
-        {{#each attendants}}
-          {{> attendant}}
-        {{/each}}
-      </ul>
-    {{/if}}
-  </div>
+  <hr />
+  <a href="https://twitter.com/intent/tweet?text={{ tweetContent }}" class="btn btn-sm btn-primary tell"><i class="fa fa-twitter"></i> {{_ "button_tell" }}</a>
+  <a href="" class="leave"> {{_ "link_leave"}}</a>
+
   <hr />
   <h2>{{_ "organized_by"}}</h2>
   <p>
@@ -48,15 +51,7 @@
 
 <template name="attendant">
   <li>
-    <div class="social">
-      <img src="{{twitterImage}}" class="img-rounded social-image" height="48px" width="48px">
-      {{> followButton user=twitterName}}
-      {{#if myTwitterAccount}}
-        <small>
-          <a href="https://twitter.com/intent/tweet?text={{ tweetContent }}" class="btn btn-sm btn-primary tell"><i class="fa fa-twitter"></i> {{_ "button_tell" }}</a>
-          <a href="" class="leave">{{_ "link_leave"}}</a>
-        </small>
-      {{/if}}
-    </div>
+    <img src="{{twitterImage}}" class="img-rounded social-image" height="48px" width="48px">
+    {{> followButton user=twitterName}}
   </li>
 </template>

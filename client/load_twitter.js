@@ -16,5 +16,6 @@ if (Meteor.isClient) {
 
       return t;
     }(document, "script", "twitter-wjs"));
+    // console.log("twttr loaded");
   });
 };
